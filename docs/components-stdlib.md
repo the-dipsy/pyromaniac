@@ -54,7 +54,7 @@ Jinja is only invoked if at least one variable is passed as keyword argument.
 Jinja expressions will be serialized before inserting them into the document.
 You can therefore safely inject structured data into your JSON document without
 worrying about breaking JSON syntax. To insert raw strings into your document,
-use the *raw* filter as in `{"greeting": "Hello, {{ name | raw }}!"}`.
+use the *raw* filter as in `{"greeting": "Hello, \{{ name | raw }}!"}`.
 
 **Example:**
 - Load and inject: `load.json(_/"file.json", name="Alice")`
