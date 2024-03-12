@@ -3,6 +3,7 @@ parent: Components
 nav_order: 80
 ---
 
+{% raw %}
 # Standard Library
 The standard library provides a default set of components that can be used in
 every pyromaniac configuration. It contains components for configuration
@@ -54,7 +55,7 @@ Jinja is only invoked if at least one variable is passed as keyword argument.
 Jinja expressions will be serialized before inserting them into the document.
 You can therefore safely inject structured data into your JSON document without
 worrying about breaking JSON syntax. To insert raw strings into your document,
-use the *raw* filter as in {% raw %}`{"greeting": "Hello, {{ name | raw }}!"}`{% endraw %}.
+use the *raw* filter as in `{"greeting": "Hello, {{ name | raw }}!"}`.
 
 **Example:**
 - Load and inject: `load.json(_/"file.json", name="Alice")`
@@ -283,3 +284,5 @@ setting the field in the result.
 **Examples:**
 - Set user and group name to "core": `ownership("core")`
 - Set only user ID to 1000: `ownership(1000, None)`
+
+{% endraw %}
